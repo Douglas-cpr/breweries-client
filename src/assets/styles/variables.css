@@ -1,0 +1,12 @@
+:root {
+  --navbar-bg: #1a1a1a;
+  --navbar-color: #fff;
+  --navbar-subtitle-color: #f9fafb;
+  --text-color: #1e293b;
+  --home-bg: #f9fafb;
+  --divider-color: #f9fafb;
+  --default-width-padding: 10%;
+  --brewery-font-color: #374151;
+  --footer-bg: #e2e8f0;
+  --select-border-color: #374151;
+}
