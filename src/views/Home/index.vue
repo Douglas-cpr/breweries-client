@@ -4,7 +4,6 @@ import BreweryCard from '@/views/Home/BreweryCard.vue'
 import services from '@/services'
 import { useBreweryStore } from '@/store'
 import { onMounted } from 'vue'
-
 import { useRouter } from 'vue-router'
 
 const router = useRouter()
@@ -32,6 +31,7 @@ onMounted(() => {
 
     <div class="home__list">
       <BreweryCard
+        @click="(e: MouseEvent) => router.push({ name: 'Brewery', params: { id: brewery.id } })"
         v-for="brewery in store.filteredBreweries"
         :key="brewery.id"
         :brewery="brewery"
@@ -52,5 +52,12 @@ onMounted(() => {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
+}
+
+
+@media(max-width: 767px) {
+  .home__list {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
 </style>

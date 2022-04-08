@@ -10,6 +10,7 @@
 <style scoped>
 .navbar {
   height: auto;
+  width: 100%;
   background-color: var(--navbar-bg);
   color: var(--navbar-color);
   padding: 4% var(--default-width-padding);
