@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<SelectFilter /> should render correctly 1`] = `
+<div
+  data-v-app=""
+>
+  
+  <span
+    class="filter__label"
+  >
+    Filter:
+  </span>
+  <select>
+    <option
+      id="filter__description"
+      value=""
+    >
+      Select an option
+    </option>
+    
+    
+  </select>
+  
+</div>
+`;

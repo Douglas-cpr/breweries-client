@@ -6,6 +6,8 @@ import { useBreweryStore } from '@/store'
 import { onMounted } from 'vue'
 import { useRouter } from 'vue-router'
 
+const FILTER_DESCRIPTION = 'Select a type'
+
 const router = useRouter()
 const store = useBreweryStore()
 
@@ -24,7 +26,7 @@ onMounted(() => {
     <div class="home__filter">
       <SelectFilter
         :options="store.breweriesTypes"
-        :filterDescription="'Selecione um tipo'"
+        :filterDescription="FILTER_DESCRIPTION"
         :onChange="(type: string) => store.setSelectedType(type)"
       />
     </div>

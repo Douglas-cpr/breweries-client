@@ -1,0 +1,8 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Navbar /> should render correctly 1`] = `
+"<nav class=\\"navbar\\">
+  <h1 class=\\"navbar__logo\\">Breweries</h1>
+  <p class=\\"navbar__brand\\">A breweries list by Open Brewery DB</p>
+</nav>"
+`;

@@ -1,6 +1,16 @@
+<script setup lang="ts">
+
+defineProps({
+  footerText: {
+    type: String,
+    default: 'Breweries List © 2022',
+  }
+})
+</script>
+
 <template>
   <div class="footer">
-    <p class="footer__text">Breweries List</p>
+    <p class="footer__text">{{ footerText }}</p>
   </div>
 </template>
 

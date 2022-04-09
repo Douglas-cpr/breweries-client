@@ -1,30 +1,34 @@
 <script lang="ts" setup>
-import { reactive } from 'vue'
+import { PropType, reactive } from 'vue'
 
 const selectedOption = reactive({
   value: '',
 })
 
-interface SelectFilterProps {
-  options: string[]
-  filterDescription: string
-  onChange: (option: string) => void
-}
-
-const props = withDefaults(defineProps<SelectFilterProps>(), {
-  options: Array,
-  filterDescription: '',
-  onChange: () => {},
+defineProps({
+  options: {
+    type: Array as PropType<string[]>,
+    default: null,
+  },
+  filterDescription: {
+    type: String as PropType<string>,
+    default: 'Select an option',
+  },
+  onChange: {
+    type: Function as PropType<Function>,
+    default: () => {},
+  },
 })
+
 </script>
 
 <template>
-  <span class="filter__description">Filter:</span>
+  <span class="filter__label">Filter:</span>
   <select
-    @change="props.onChange(selectedOption.value)"
+    @change="onChange(selectedOption.value)"
     v-model="selectedOption.value"
   >
-    <option selected value="">{{ filterDescription }}</option>
+    <option id="filter__description" selected value="">{{ filterDescription }}</option>
     <option v-for="option in options" :key="option" :value="option">
       {{ option }}
     </option>
@@ -32,7 +36,7 @@ const props = withDefaults(defineProps<SelectFilterProps>(), {
 </template>
 
 <style scoped>
-.filter__description {
+.filter__label {
   font-size: 0.9rem;
   padding: 0 5px;
 }

@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Footer/> should render correctly 1`] = `
+"<div class=\\"footer\\">
+  <p class=\\"footer__text\\">Breweries List © 2022</p>
+</div>"
+`;
