@@ -6,16 +6,16 @@ module.exports = {
     '^.+\\.vue$': 'vue3-jest',
   },
   testMatch: [
-    '**/*.spec.ts'
+    '<rootDir>/tests/**/*.spec.ts'
   ],
   transform: {
     '^.+\\.ts$': 'ts-jest',
     '^.+\\.vue$': '@vue/vue3-jest'
   },
   moduleNameMapper: {
-    '^@/(.*)$': '<rootDir>/src/$1',
+    '@/tests/(.*)': '<rootDir>/tests/$1',
+    '@/(.*)': '<rootDir>/src/$1'
   },
   testEnvironment: "jsdom",
-  transformIgnorePatterns: ['<rootDir>/node_modules/'],
   moduleFileExtensions: ['json', 'js', 'jsx', 'ts', 'tsx', 'vue']
 };

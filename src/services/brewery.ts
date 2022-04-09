@@ -1,5 +1,5 @@
 import { Brewery } from '@/types/brewery'
-import { RequestError } from '@/types/error'
+import { RequestError } from '@/services/errors'
 import { AxiosInstance } from 'axios'
 
 type GetAll = {
@@ -19,10 +19,7 @@ export function breweryService(httpClient: AxiosInstance): BreweryService {
       let errors: RequestError | null = null
 
       if (!response.data) {
-        errors = {
-          status: response.request,
-          statusText: response.request.statusText,
-        }
+        errors = new RequestError(response.request.statusText)
       }
 
       return {

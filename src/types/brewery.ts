@@ -9,6 +9,6 @@ export type Brewery = {
   state: string
   city: string
   country: string
-  longitude: number
-  latitude: number
+  longitude: string
+  latitude: string
 }
