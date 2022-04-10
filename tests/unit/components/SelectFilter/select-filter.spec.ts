@@ -1,8 +1,12 @@
 import SelectFilter from '@/components/SelectFilter.vue'
-import { DOMWrapper, mount, shallowMount } from '@vue/test-utils'
-import { render } from 'vue'
+import { DOMWrapper, shallowMount } from '@vue/test-utils'
 
 describe('<SelectFilter />', () => {
+
+
+  // this work with factory component | example footer.spec.ts
+  // const findOptions = () => wrapper.findAll('option')
+
   it('should render correctly', () => {
       const wrapper = shallowMount(SelectFilter)
 

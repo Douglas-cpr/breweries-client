@@ -1,1 +1,1 @@
-export * from './breweries'
+export * from './brewery'

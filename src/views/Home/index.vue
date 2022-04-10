@@ -16,6 +16,10 @@ async function getBreweries() {
   store.setBreweries(response.data)
 }
 
+function openBreweryCard(id: string) {
+  router.push({ name: 'Brewery', params: { id } })
+}
+
 onMounted(() => {
   getBreweries()
 })
@@ -33,7 +37,7 @@ onMounted(() => {
 
     <div class="home__list">
       <BreweryCard
-        @click="(e: MouseEvent) => router.push({ name: 'Brewery', params: { id: brewery.id } })"
+        @click="() => openBreweryCard(brewery.id)"
         v-for="brewery in store.filteredBreweries"
         :key="brewery.id"
         :brewery="brewery"
