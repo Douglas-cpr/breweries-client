@@ -8,6 +8,7 @@
     "jsx": "preserve",
     "rootDirs": ["src", "tests"],
     "baseUrl": "src",
+    "types": ["vite/client", "@types/jest", "cypress"],
     "paths": {
       "@/*": [
         "*"
@@ -16,7 +17,7 @@
     },
     "sourceMap": true,
     "resolveJsonModule": true,
-    "isolatedModules": true,
+    "isolatedModules": false,
     "esModuleInterop": true,
     "lib": [
       "esnext",
