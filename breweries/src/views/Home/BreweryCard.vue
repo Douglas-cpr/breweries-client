@@ -68,6 +68,7 @@ defineProps({
   font-size: 0.9rem;
   color: var(--brewery-font-color);
   display: flex;
+  cursor: pointer;
   flex-direction: column;
   gap: 10px;
   transition: all ease-out 0.2s;

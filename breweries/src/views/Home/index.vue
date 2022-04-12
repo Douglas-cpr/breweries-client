@@ -26,7 +26,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <main class="home">
+  <main data-cy="home-view" class="home">
     <div class="home__filter">
       <SelectFilter
         :options="store.breweriesTypes"
@@ -37,6 +37,7 @@ onMounted(() => {
 
     <div class="home__list">
       <BreweryCard
+        data-cy="brewery-card"
         @click="() => openBreweryCard(brewery.id)"
         v-for="brewery in store.filteredBreweries"
         :key="brewery.id"
