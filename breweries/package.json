@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "@types/vue-router": "^2.0.0",
-    "axios": "^0.26.1",
+    "axios": "^1.6.0",
     "pinia": "^2.0.13",
     "url": "^0.11.0",
     "vue": "^3.2.25",
